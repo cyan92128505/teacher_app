@@ -26,7 +26,7 @@ class Pagination with _$Pagination {
     @Default('') @JsonKey(name: 'prev_cursor') String prevCursor,
     @Default(false) @JsonKey(name: 'has_next') bool hasNext,
     @Default(false) @JsonKey(name: 'has_prev') bool hasPrev,
-  }) = Ppagination;
+  }) = _Pgination;
 
   factory Pagination.fromJson(Map<String, dynamic> json) =>
       _$PaginationFromJson(json);
