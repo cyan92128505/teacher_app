@@ -1,0 +1,48 @@
+Table users {
+  id    varchar [primary key]
+  username  varchar
+  password_hash varchar
+  created_at    timestamp
+}
+
+Table roles {
+  id    varchar [primary key]
+  role_name  varchar
+  role_type varchar
+  created_at    timestamp
+}
+
+Table role_users {
+  role_id    varchar
+  user_id   varchar
+  created_at    timestamp
+}
+
+Table courses {
+  id    varchar [primary key]
+  course_name  varchar
+  created_at    timestamp
+  start_at  varchar
+  end_at    varchar
+  weekend varchar
+  description   varchar
+  lecturer_id varchar
+}
+
+Table course_users {
+  id    varchar [primary key]
+  course_id varchar
+  user_id   varchar
+  created_at    timestamp
+}
+
+Enum role_type {
+  student
+  lecturer
+}
+
+Ref: role_users.user_id > users.id 
+Ref: role_users.role_id > roles.id 
+Ref: course_users.user_id > users.id 
+Ref: course_users.lecturer_id > users.id 
+Ref: course_users.course_id > courses.id 
