@@ -27,7 +27,7 @@ class TeacherListPage extends HookConsumerWidget {
           children: [
             Expanded(
               child: ListView(
-                children: viewModel.teachers
+                children: []
                     .map(
                       (teacher) => Padding(
                         padding: const EdgeInsets.only(bottom: 16),

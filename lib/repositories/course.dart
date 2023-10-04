@@ -1,15 +1,15 @@
 import 'package:teacher/models/api_models.dart';
 
 abstract class CourseRepository {
-  Future<StatusHttpResponse> createCourse(CourseItem course) async {
-    return const StatusHttpResponse();
+  Future<CourseItem?> createCourse(CourseItem course) async {
+    return course;
   }
 
-  Future<StatusHttpResponse> updateCourse(CourseItem course) async {
-    return const StatusHttpResponse();
+  Future<CourseItem?> updateCourse(CourseItem course) async {
+    return course;
   }
 
-  Future<StatusHttpResponse> deleteCourse(CourseItem course) async {
+  Future<StatusHttpResponse> deleteCourse(String courseID) async {
     return const StatusHttpResponse();
   }
 
@@ -25,17 +25,17 @@ abstract class CourseRepository {
 
 class HttpCourseRepository extends CourseRepository {
   @override
-  Future<StatusHttpResponse> createCourse(CourseItem course) async {
-    return const StatusHttpResponse();
+  Future<CourseItem?> createCourse(CourseItem course) async {
+    return course;
   }
 
   @override
-  Future<StatusHttpResponse> updateCourse(CourseItem course) async {
-    return const StatusHttpResponse();
+  Future<CourseItem?> updateCourse(CourseItem course) async {
+    return course;
   }
 
   @override
-  Future<StatusHttpResponse> deleteCourse(CourseItem course) async {
+  Future<StatusHttpResponse> deleteCourse(String courseID) async {
     return const StatusHttpResponse();
   }
 
@@ -48,5 +48,41 @@ class HttpCourseRepository extends CourseRepository {
   Future<ListTeacherCourseResponse> getTeacherCourseList(
       ListTeacherCourseRequest request) async {
     return const ListTeacherCourseResponse();
+  }
+}
+
+class MockCourseRepository extends CourseRepository {
+  final List<CourseItem> dataListCourse;
+  final List<TeacherCourseItem> dataListTeacherCourseItem;
+
+  MockCourseRepository({
+    required this.dataListCourse,
+    required this.dataListTeacherCourseItem,
+  });
+
+  @override
+  Future<CourseItem?> createCourse(CourseItem course) async {
+    return course;
+  }
+
+  @override
+  Future<CourseItem?> updateCourse(CourseItem course) async {
+    return course;
+  }
+
+  @override
+  Future<StatusHttpResponse> deleteCourse(String courseID) async {
+    return const StatusHttpResponse(code: 200, message: 'ok');
+  }
+
+  @override
+  Future<ListCourseResponse> getCourseList(ListCourseRequest request) async {
+    return ListCourseResponse(data: dataListCourse);
+  }
+
+  @override
+  Future<ListTeacherCourseResponse> getTeacherCourseList(
+      ListTeacherCourseRequest request) async {
+    return ListTeacherCourseResponse(data: dataListTeacherCourseItem);
   }
 }

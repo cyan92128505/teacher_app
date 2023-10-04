@@ -36,6 +36,7 @@ class Pagination with _$Pagination {
 class TeacherItem with _$TeacherItem {
   const factory TeacherItem({
     @Default('') @JsonKey(name: 'id') String id,
+    @Default('') @JsonKey(name: 'user_id') String userID,
     @Default('') @JsonKey(name: 'name') String name,
     @Default('') @JsonKey(name: 'type') String type,
     @Default('') @JsonKey(name: 'image_url') String imageURL,
@@ -130,6 +131,7 @@ class ListTeacherCourseRequest with _$ListTeacherCourseRequest {
   const factory ListTeacherCourseRequest({
     @Default(20) @JsonKey(name: 'row') int row,
     @Default('') @JsonKey(name: 'cursor') String cursor,
+    @Default('') @JsonKey(name: 'teacher_id') String teacherID,
     @Default(true) @JsonKey(name: 'descending') bool descending,
   }) = _ListTeacherCourseRequest;
 

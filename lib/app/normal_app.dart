@@ -17,7 +17,7 @@ class NormalApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: TeacherListPage(),
+      home: const TeacherListPage(),
     );
   }
 }
