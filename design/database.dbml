@@ -9,6 +9,7 @@ Table roles {
   id    varchar [primary key]
   role_name  varchar
   role_type varchar
+  role_title varchar
   created_at    timestamp
 }
 

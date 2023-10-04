@@ -13,6 +13,7 @@ CREATE TABLE
         role_type TEXT CHECK (
             role_type IN ('lecturer', 'student')
         ),
+        role_title TEXT,
         created_at TIMESTAMP
     );
 
