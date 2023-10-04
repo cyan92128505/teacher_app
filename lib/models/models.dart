@@ -1,139 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+export 'view_models.dart';
+
 part 'models.freezed.dart';
 part 'models.g.dart';
-
-enum TeacherEnum {
-  demonstrator,
-  lecturer,
-  seniorLecturer,
-  professor;
-
-  String get text => switch (this) {
-        TeacherEnum.demonstrator => 'Demonstrator',
-        TeacherEnum.lecturer => 'Lecturer',
-        TeacherEnum.seniorLecturer => 'Senior Lecturer',
-        TeacherEnum.professor => 'Professor',
-      };
-}
-
-class CourseInfo {
-  final String id;
-  final String name;
-  final String startAt;
-  final String endAt;
-  final String weekend;
-  final String description;
-  final String teacherID;
-
-  CourseInfo({
-    required this.id,
-    required this.name,
-    required this.startAt,
-    required this.endAt,
-    required this.weekend,
-    required this.description,
-    required this.teacherID,
-  });
-
-  String get timeRangeInfoText => '$weekend,$startAt-$endAt';
-}
-
-class TeacherInfo {
-  final String id;
-  final TeacherEnum type;
-  final String name;
-  final String imageUrl;
-  final List<CourseInfo> courses;
-
-  TeacherInfo({
-    required this.id,
-    required this.type,
-    required this.name,
-    required this.imageUrl,
-    required this.courses,
-  });
-}
-
-class TeacherListViewModel {
-  final List<TeacherInfo> teachers;
-
-  TeacherListViewModel({required this.teachers});
-}
-
-TeacherListViewModel viewModel = TeacherListViewModel(
-  teachers: [
-    TeacherInfo(
-      id: '1',
-      type: TeacherEnum.professor,
-      name: 'Albert',
-      imageUrl: 'https://i.pravatar.cc/150?img=1',
-      courses: [
-        CourseInfo(
-          id: '1',
-          name: '基礎程式設計',
-          startAt: '10:00',
-          endAt: '12:00',
-          weekend: '每週二',
-          description: '',
-          teacherID: '1',
-        ),
-        CourseInfo(
-          id: '1',
-          name: '基礎程式設計',
-          startAt: '10:00',
-          endAt: '12:00',
-          weekend: '每週二',
-          description: '',
-          teacherID: '1',
-        ),
-        CourseInfo(
-          id: '1',
-          name: '基礎程式設計',
-          startAt: '10:00',
-          endAt: '12:00',
-          weekend: '每週二',
-          description: '',
-          teacherID: '1',
-        ),
-      ],
-    ),
-    TeacherInfo(
-      id: '1',
-      type: TeacherEnum.professor,
-      name: 'Albert',
-      imageUrl: 'https://i.pravatar.cc/150?img=1',
-      courses: [
-        CourseInfo(
-          id: '1',
-          name: '基礎程式設計',
-          startAt: '10:00',
-          endAt: '12:00',
-          weekend: '每週二',
-          description: '',
-          teacherID: '1',
-        ),
-      ],
-    ),
-    TeacherInfo(
-      id: '1',
-      type: TeacherEnum.professor,
-      name: 'Albert',
-      imageUrl: 'https://i.pravatar.cc/150?img=1',
-      courses: [
-        CourseInfo(
-          id: '1',
-          name: '基礎程式設計',
-          startAt: '10:00',
-          endAt: '12:00',
-          weekend: '每週二',
-          description: '',
-          teacherID: '1',
-        )
-      ],
-    ),
-  ],
-);
 
 @freezed
 class UserDTO with _$UserDTO {
@@ -141,6 +11,7 @@ class UserDTO with _$UserDTO {
     @Default('') @JsonKey(name: 'id') String id,
     @Default('') @JsonKey(name: 'user_name') String userName,
     @Default('') @JsonKey(name: 'password') String password,
+    @Default('') @JsonKey(name: 'image_url') String imageUrl,
     @Default(null) @JsonKey(name: 'created_at') DateTime createdAt,
   }) = _UserDTO;
 
@@ -163,6 +34,7 @@ class RoleDTO with _$RoleDTO {
   const factory RoleDTO({
     @Default('') @JsonKey(name: 'id') String id,
     @Default('') @JsonKey(name: 'role_name') String roleName,
+    @Default('') @JsonKey(name: 'role_title') String roleTitle,
     @Default('student') @JsonKey(name: 'role_type') String roleType,
     @Default(null) @JsonKey(name: 'created_at') DateTime createdAt,
   }) = _RoleDTO;

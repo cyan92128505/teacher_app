@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:teacher/components/teacher_tile.dart';
-import 'package:teacher/models/models.dart';
 
-class TeacherListPage extends StatelessWidget {
+class TeacherListPage extends HookConsumerWidget {
   const TeacherListPage({
     super.key,
-    required this.viewModel,
   });
 
-  final TeacherListViewModel viewModel;
-
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(
         leading: const BackButton(),

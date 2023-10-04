@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:teacher/models/models.dart';
 import 'package:teacher/views/home.dart';
 
 class NormalApp extends StatelessWidget {
@@ -18,9 +17,7 @@ class NormalApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: TeacherListPage(
-        viewModel: viewModel,
-      ),
+      home: TeacherListPage(),
     );
   }
 }
