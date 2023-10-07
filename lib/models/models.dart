@@ -12,7 +12,7 @@ class UserDTO with _$UserDTO {
     @Default('') @JsonKey(name: 'user_name') String userName,
     @Default('') @JsonKey(name: 'password') String password,
     @Default('') @JsonKey(name: 'image_url') String imageUrl,
-    @Default(null) @JsonKey(name: 'created_at') DateTime createdAt,
+    @Default(null) @JsonKey(name: 'created_at') DateTime? createdAt,
   }) = _UserDTO;
 
   factory UserDTO.fromJson(Map<String, dynamic> json) =>
@@ -36,7 +36,7 @@ class RoleDTO with _$RoleDTO {
     @Default('') @JsonKey(name: 'role_name') String roleName,
     @Default('') @JsonKey(name: 'role_title') String roleTitle,
     @Default('student') @JsonKey(name: 'role_type') String roleType,
-    @Default(null) @JsonKey(name: 'created_at') DateTime createdAt,
+    @Default(null) @JsonKey(name: 'created_at') DateTime? createdAt,
   }) = _RoleDTO;
 
   factory RoleDTO.fromJson(Map<String, dynamic> json) =>
@@ -48,7 +48,7 @@ class RoleUserDTO with _$RoleUserDTO {
   const factory RoleUserDTO({
     @Default('') @JsonKey(name: 'role_id') String roleID,
     @Default('') @JsonKey(name: 'user_id') String userID,
-    @Default(null) @JsonKey(name: 'created_at') DateTime createdAt,
+    @Default(null) @JsonKey(name: 'created_at') DateTime? createdAt,
   }) = _RoleUserDTO;
 
   factory RoleUserDTO.fromJson(Map<String, dynamic> json) =>
@@ -60,7 +60,7 @@ class CourseDTO with _$CourseDTO {
   const factory CourseDTO({
     @Default('') @JsonKey(name: 'id') String id,
     @Default('') @JsonKey(name: 'course_name') String courseName,
-    @Default(null) @JsonKey(name: 'created_at') DateTime createdAt,
+    @Default(null) @JsonKey(name: 'created_at') DateTime? createdAt,
     @Default('00:00') @JsonKey(name: 'start_at') String startAt,
     @Default('23:59') @JsonKey(name: 'end_at') String endAt,
     @Default('') @JsonKey(name: 'weekend') String weekend,
@@ -77,7 +77,7 @@ class CourseUserDTO with _$CourseUserDTO {
   const factory CourseUserDTO({
     @Default('') @JsonKey(name: 'course_id') String courseID,
     @Default('') @JsonKey(name: 'user_id') String userID,
-    @Default(null) @JsonKey(name: 'created_at') DateTime createdAt,
+    @Default(null) @JsonKey(name: 'created_at') DateTime? createdAt,
   }) = _CourseUserDTO;
 
   factory CourseUserDTO.fromJson(Map<String, dynamic> json) =>
