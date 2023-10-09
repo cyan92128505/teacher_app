@@ -23,6 +23,34 @@ abstract class CourseRepository {
   }
 }
 
+class LocalCourseRepository extends CourseRepository {
+  @override
+  Future<CourseItem?> createCourse(CourseItem course) async {
+    return course;
+  }
+
+  @override
+  Future<CourseItem?> updateCourse(CourseItem course) async {
+    return course;
+  }
+
+  @override
+  Future<StatusHttpResponse> deleteCourse(String courseID) async {
+    return const StatusHttpResponse();
+  }
+
+  @override
+  Future<ListCourseResponse> getCourseList(ListCourseRequest request) async {
+    return const ListCourseResponse();
+  }
+
+  @override
+  Future<ListTeacherCourseResponse> getTeacherCourseList(
+      ListTeacherCourseRequest request) async {
+    return const ListTeacherCourseResponse();
+  }
+}
+
 class HttpCourseRepository extends CourseRepository {
   @override
   Future<CourseItem?> createCourse(CourseItem course) async {

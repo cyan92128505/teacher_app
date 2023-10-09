@@ -51,7 +51,7 @@ class TeacherItem with _$TeacherItem {
 class ListTeacherRequest with _$ListTeacherRequest {
   const factory ListTeacherRequest({
     @Default(20) @JsonKey(name: 'row') int row,
-    @Default('') @JsonKey(name: 'cursor') String cursor,
+    @Default('') @JsonKey(name: 'page') String cursor,
     @Default(true) @JsonKey(name: 'descending') bool descending,
   }) = _ListTeacherRequest;
 

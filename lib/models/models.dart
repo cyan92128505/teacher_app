@@ -19,16 +19,6 @@ class UserDTO with _$UserDTO {
       _$UserDTOFromJson(json);
 }
 
-enum RoleType {
-  student,
-  lecturer;
-
-  String get value => switch (this) {
-        RoleType.student => 'student',
-        RoleType.lecturer => 'lecturer',
-      };
-}
-
 @freezed
 class RoleDTO with _$RoleDTO {
   const factory RoleDTO({

@@ -3,6 +3,7 @@ CREATE TABLE
         id TEXT PRIMARY KEY,
         user_name TEXT,
         password_hash TEXT,
+        imageUrl TEXT,
         created_at TIMESTAMP
     );
 
