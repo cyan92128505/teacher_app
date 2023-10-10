@@ -1,0 +1,247 @@
+{
+    "@@locale": "en",
+    "language": "Language",
+    "@language": {
+        "description": "語言"
+    },
+    "setting": "Setting",
+    "@setting": {
+        "description": "設定"
+    },
+    "privacyPolicyStatement": "Privacy Policy Statement",
+    "@privacyPolicyStatement": {
+        "description": "隱私權聲明"
+    },
+    "aboutApp": "About {appName}",
+    "@aboutApp": {
+        "description": "關於 {appName}",
+        "placeholders": {
+            "appName": {}
+        }
+    },
+    "submit": "Submit",
+    "@submit": {
+        "description": "送出"
+    },
+    "user": "User",
+    "@user": {
+        "description": "使用者"
+    },
+    "username": "User Name",
+    "@username": {
+        "description": "使用者名稱"
+    },
+    "deleteOne": "Delete {target}",
+    "@deleteOne": {
+        "description": "刪除__target__",
+        "placeholders": {
+            "target": {}
+        }
+    },
+    "done": "Done",
+    "@done": {
+        "description": "確認"
+    },
+    "addSome": "Add {some}",
+    "@addSome": {
+        "description": "新增 Some",
+        "placeholders": {
+            "some": {}
+        }
+    },
+    "account": "Account",
+    "@account": {
+        "description": "帳號"
+    },
+    "signUpLogIn": "Sign Up / Log In",
+    "@signUpLogIn": {
+        "description": "註冊 / 登入"
+    },
+    "editUsername": "Edit Username",
+    "@editUsername": {
+        "description": "編輯使用者名稱"
+    },
+    "pleaseEnterAUsername": "Please enter a username",
+    "@pleaseEnterAUsername": {
+        "description": "請輸入使用者名稱"
+    },
+    "pleaseLogInOrRegisterFirst": "Please log in or register first",
+    "@pleaseLogInOrRegisterFirst": {
+        "description": "請先登入或註冊"
+    },
+    "complete": "Complete",
+    "@complete": {
+        "description": "完成"
+    },
+    "cancel": "Cancel",
+    "@cancel": {
+        "description": "取消"
+    },
+    "logOut": "Log Out",
+    "@logOut": {
+        "description": "登出"
+    },
+    "thisIDIsAlreadyInUse": "This ID is already in use",
+    "@thisIDIsAlreadyInUse": {
+        "description": "此 ID 已被使用"
+    },
+    "usernameRequirements": "Please use alphanumeric characters, underscores, and periods",
+    "@usernameRequirements": {
+        "description": "提示用戶註冊帳號時需要遵守的用戶名稱要求"
+    },
+    "targetCannotBeEmpty": "{target} cannot be empty",
+    "@targetCannotBeEmpty": {
+        "description": "target不可以為空",
+        "placeholders": {
+            "target": {}
+        }
+    },
+    "invalidTarget": "Invalid {target}",
+    "@invalidTarget": {
+        "description": "不合法的target",
+        "placeholders": {
+            "target": {}
+        }
+    },
+    "targetCannotExceedNumberCharacters": "{target} cannot exceed {number} characters",
+    "@targetCannotExceedNumberCharacters": {
+        "description": "target不可以超過number個字",
+        "placeholders": {
+            "target": {},
+            "number": {}
+        }
+    },
+    "save": "Save",
+    "@save": {
+        "description": "儲存"
+    },
+    "edit": "Edit",
+    "@edit": {
+        "description": "編輯"
+    },
+    "editBrandInfo": "Brand Edit",
+    "@editBrandInfo": {
+        "description": "編輯品牌專頁"
+    },
+    "pleaseContactAdministrator": "Please Contact Administrator",
+    "@pleaseContactAdministrator": {
+        "description": "請洽管理員"
+    },
+    "close": "Close",
+    "@close": {
+        "description": "關閉"
+    },
+    "providerLinkedToUser": "The provider has already been linked to the user",
+    "@providerLinkedToUser": {
+        "description": "供應商已經連結到該使用者"
+    },
+    "invalidProviderCredential": "The provider's credential is not valid",
+    "@invalidProviderCredential": {
+        "description": "供應商的憑證無效"
+    },
+    "accountAlreadyExistsOrLinked": "The account corresponding to the credential already exists, or is already linked to a Firebase User",
+    "@accountAlreadyExistsOrLinked": {
+        "description": "與該憑證相對應的帳戶已存在，或已經連結到 Firebase 使用者"
+    },
+    "unknownError": "Unknown error",
+    "@unknownError": {
+        "description": "未知錯誤"
+    },
+    "noInternetConnection": "No Internet Connection",
+    "@noInternetConnection": {
+        "description": "無網路服務"
+    },
+    "noItemsAddedYet": "No {item} Have Been Added Yet",
+    "@noItemsAddedYet": {
+        "description": "尚未新增任何[item]",
+        "placeholders": {
+            "item": {}
+        }
+    },
+    "clean": "Clean",
+    "@clean": {
+        "description": "清除"
+    },
+    "cleanAll": "Clean All",
+    "@cleanAll": {
+        "description": "清除全部"
+    },
+    "copyLink": "Copy Link",
+    "@copyLink": {
+        "description": "複製連結"
+    },
+    "delete": "Delete",
+    "@delete": {
+        "description": "刪除"
+    },
+    "confirmDelete": "Are you sure you want to delete?",
+    "@confirmDelete": {
+        "description": "確認是否要執行刪除操作"
+    },
+    "cannotBeUndone": "Cannot be undone after deletion",
+    "@cannotBeUndone": {
+        "description": "提醒刪除操作無法撤銷"
+    },
+    "notification": "Notification",
+    "@notification": {
+        "description": "表示通知的標題"
+    },
+    "update": "Update",
+    "@update": {
+        "description": "用於更新內容的按鈕或操作"
+    },
+    "imageDeletedCannotSave": "Unable to save due to image deletion. Please re-edit.",
+    "@imageDeletedCannotSave": {
+        "description": "提醒因圖片刪除而無法保存"
+    },
+    "startDateEndDate": "Start and End Date",
+    "@startDateEndDate": {
+        "description": "表示活動的開始日期和結束日期"
+    },
+    "selectDateTime": "Select Date and Time",
+    "@selectDateTime": {
+        "description": "用於選擇日期和時間的操作"
+    },
+    "startTime": "Start Time",
+    "@startTime": {
+        "description": "表示活動的開始時間"
+    },
+    "endTime": "End Time",
+    "@endTime": {
+        "description": "表示活動的結束時間"
+    },
+    "eventAvailability": "Availability for participants after event publishing",
+    "@eventAvailability": {
+        "description": "提示活動的參與期間"
+    },
+    "participantsCount": "{number} participants",
+    "@participantsCount": {
+        "description": "表示參加活動的人數",
+        "placeholders": {
+            "number": {}
+        }
+    },
+    "participantsList": "Participants List",
+    "@participantsList": {
+        "description": "參加活動的人的列表"
+    },
+    "eventEnded": "Ended {timego}",
+    "@eventEnded": {
+        "description": "提示活動已結束",
+        "placeholders": {
+            "timeago": {}
+        }
+    },
+    "join": "Join",
+    "@join": {
+        "description": "用於參加活動的按鈕或操作"
+    },
+    "eventMessage": "Event Message",
+    "@eventMessage": {
+        "description": "活動相關的消息"
+    },
+    "alreadyJoined": "Already joined",
+    "@alreadyJoined": {
+        "description": "提示已經參加活動"
+    }
+}
