@@ -26,6 +26,10 @@ abstract class UserDao {
   @Query('SELECT * FROM User WHERE id = :id')
   Future<User?> findUserById(String id);
 
+  @Query(
+      'SELECT * FROM User WHERE userName = :userName AND passwordHash = :password')
+  Future<User?> findUserByUserNameAndPassword(String userName, String password);
+
   @Query('''
 SELECT * FROM User 
 JOIN RoleUser ON User.id = RoleUser.userID

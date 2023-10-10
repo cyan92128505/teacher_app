@@ -1,3 +1,5 @@
+import 'package:teacher/database.dart';
+import 'package:teacher/entities/entities.dart';
 import 'package:teacher/models/api_models.dart';
 
 abstract class CourseRepository {
@@ -26,6 +28,38 @@ abstract class CourseRepository {
 class LocalCourseRepository extends CourseRepository {
   @override
   Future<CourseItem?> createCourse(CourseItem course) async {
+    final db = await DatabaseHelper().database;
+
+    final user = await db.userDao.findUserById(course.teacherID);
+
+    if (user == null) {
+      return null;
+    }
+
+    final roleList = await db.roleUserDao.findAllRoleUserByUserIDAndRoleType(
+      RoleType.lecturer,
+      '${user.id}',
+    );
+
+    if (roleList.isEmpty) {
+      return null;
+    }
+
+    final now = DateTime.now().toIso8601String();
+
+    await db.courseDao.insertCourse(
+      Course(
+        updateTime: now,
+        createTime: now,
+        courseName: course.name,
+        startAt: course.startAt,
+        endAt: course.endAt,
+        weekend: course.weekend,
+        description: course.description,
+        lecturerID: user.id!,
+      ),
+    );
+
     return course;
   }
 

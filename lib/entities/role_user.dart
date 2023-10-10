@@ -22,6 +22,25 @@ abstract class RoleUserDao {
   Future<List<RoleUser>> findAllRoleUser();
 
   @Query('''
+SELECT * FROM RoleUser
+AND userID = :userID
+''')
+  Future<List<RoleUser>> findAllRoleUserByUserID(
+    String userID,
+  );
+
+  @Query('''
+SELECT * FROM RoleUser
+JOIN Role ON RoleUser.roleID = Role.id
+WHERE Role.roleType = :type 
+AND userID = :userID
+''')
+  Future<List<RoleUser>> findAllRoleUserByUserIDAndRoleType(
+    RoleType type,
+    String userID,
+  );
+
+  @Query('''
 SELECT * FROM RoleUser 
 JOIN Role ON RoleUser.roleID = Role.id
 WHERE Role.roleType = :type

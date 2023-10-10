@@ -6,6 +6,17 @@ part 'models.freezed.dart';
 part 'models.g.dart';
 
 @freezed
+class JWTPayload with _$JWTPayload {
+  const factory JWTPayload({
+    @Default('') @JsonKey(name: 'id') String id,
+    @Default('') @JsonKey(name: 'role_type') String type,
+  }) = _JWTPayload;
+
+  factory JWTPayload.fromJson(Map<String, dynamic> json) =>
+      _$JWTPayloadFromJson(json);
+}
+
+@freezed
 class UserDTO with _$UserDTO {
   const factory UserDTO({
     @Default('') @JsonKey(name: 'id') String id,
