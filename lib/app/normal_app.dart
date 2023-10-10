@@ -1,23 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:teacher/views/home.dart';
+import 'package:teacher/configs/theme.dart';
+import 'package:teacher/routes/routes.dart';
 
 class NormalApp extends StatelessWidget {
   const NormalApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.white,
-          iconTheme: IconThemeData(color: Colors.black87),
-          titleTextStyle: TextStyle(color: Colors.black87),
-          scrolledUnderElevation: 0,
-          shadowColor: Colors.transparent,
-        ),
-        scaffoldBackgroundColor: Colors.white,
-      ),
-      home: const TeacherListPage(),
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      theme: defaultThemeData,
+      routerConfig: router,
     );
   }
 }
