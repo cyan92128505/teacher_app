@@ -6,6 +6,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:teacher/configs/color.dart';
 import 'package:teacher/configs/svg_assets.dart';
 import 'package:teacher/hooks/use_initial.dart';
+import 'package:teacher/utils/local_storage.dart';
 
 class SplashView extends HookConsumerWidget {
   const SplashView({super.key});
@@ -17,6 +18,8 @@ class SplashView extends HookConsumerWidget {
     });
 
     useInitail(() async {
+      final token = await LocalStoregeKey.accessToken.value ?? '';
+      if (token.isEmpty) {}
       // goToPage();
     });
 
